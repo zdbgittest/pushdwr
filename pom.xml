@@ -89,6 +89,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.1.7.RELEASE</version>
 		</dependency>
+<!-- 		该jar包是官网下载的，版本是3.0.0 -->
 		<dependency>
 			<groupId>org.directwebremoting</groupId>
 			<artifactId>dwr</artifactId>
