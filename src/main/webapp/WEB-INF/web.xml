@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="bitrac" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<!-- 加载Spring容器配置 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- 设置Spring容器加载所有的配置文件的路径 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring-common.xml</param-value>
+	</context-param>
+	
+	
+	<!-- 配置SpringMVC核心控制器 -->
+	<servlet>
+		<servlet-name>springMVC</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring-mvc.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>springMVC</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<servlet>  
+  
+    <servlet-name>dwr-invoker</servlet-name>  
+  
+    <servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>  
+  
+    <init-param>  
+  
+        <description>调试DWR,发布系统时，应将其设为false</description>  
+  
+        <param-name>debug</param-name>  
+  
+        <param-value>true</param-value>  
+  
+    </init-param>  
+  
+    <!-- 使用polling和comet的方式 -->  
+  
+    <init-param>  
+  
+        <param-name>pollAndCometEnabled</param-name>  
+  
+        <param-value>true</param-value>  
+  
+    </init-param>  
+  
+    <load-on-startup>1</load-on-startup>  
+  
+</servlet>  
+  
+<servlet-mapping>  
+  
+    <servlet-name>dwr-invoker</servlet-name>  
+  
+    <url-pattern>/dwr/*</url-pattern>  
+  
+</servlet-mapping>
+	
+	
+	
+	
+	
+	
+	
+	
+	<display-name>pushdwr</display-name> 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	<welcome-file-list>
+  		<welcome-file>index.jsp</welcome-file>
+  	</welcome-file-list>
+
+</web-app>
